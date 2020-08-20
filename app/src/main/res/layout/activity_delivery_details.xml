@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliveryDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:weightSum="12"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcel ID:#"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parcel_no_popup_dm_delivery"
+                    android:layout_weight="6"
+                    android:text=""
+                    android:textColor="#FF3D00"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:visibility="gone"
+                    android:layout_weight="6">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:text="Total: "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/total_amount_popup_dm_delivery"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textColor="#FF3D00"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ৳"
+                        android:textSize="18sp"
+                        android:textColor="#FF3D00"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Receiver Information"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:src="@color/colorPrimaryDark"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/r1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/receiver_name_order_popup_dm"
+                        android:layout_toRightOf="@+id/r1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=""
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/r2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/receiver_phone_order_popup_dm"
+                        android:layout_toRightOf="@+id/r2"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=""
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/r3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Time: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/receiver_order_time_popup_dm"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/r3"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/r4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Type: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/receiver_payment_type_order_popup_dm"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/r4"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/r6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thana: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/receiver_thana_order_popup_dm"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/r6"
+                        android:text=""
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/r7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Details Address: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/receiver_details_address_order_popup_dm"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/r7"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/merchant_call"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/dm_call_button_delivery_details"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_call"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_round"/>
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Information"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:src="@color/colorPrimaryDark"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/s1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Size: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/product_size_order_popup_dm_deliver"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/s1"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/s2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/product_weight_order_popup_dm_deliver"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/s2"
+                        android:text=""
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/s3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Package Type: "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/product_package_type_order_popup_dm_deliver"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_toRightOf="@+id/s3"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/complete_parcel_button_popup_dm_deliver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:background="#1F7E24"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorPrimary"/>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

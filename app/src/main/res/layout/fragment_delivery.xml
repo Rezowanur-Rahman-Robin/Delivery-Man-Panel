@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DeliveryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appbarLayout_delivery_dm">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tabs_delivery_dm"
+                android:background="@color/colorPrimaryDark"
+                app:tabTextColor="@color/colorPrimary"
+                app:tabSelectedTextColor="@color/colorAccent"
+                >
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_tab_pager_delivery_dm"
+            android:layout_below="@+id/appbarLayout_delivery_dm"
+            >
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

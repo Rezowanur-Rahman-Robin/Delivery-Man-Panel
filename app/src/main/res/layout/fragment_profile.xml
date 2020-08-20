@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+
+
+
+
+               <RelativeLayout
+                   android:id="@+id/company_header_holder"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:background="@drawable/rectangle2"
+                   >
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:id="@+id/dm_profile_image_profile_md"
+                       android:layout_width="wrap_content"
+                       android:layout_height="100dp"
+                       android:src="@drawable/delivery_man2"
+                       android:layout_centerHorizontal="true">
+                   </de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+                   <ImageButton
+                       android:id="@+id/edit_profile_dm_button"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/ic_edit_black_profile"
+                       android:background="#00BCD4"
+                       android:padding="10dp"></ImageButton>
+
+                   <TextView
+                       android:id="@+id/dm_name_profile_top"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/dm_profile_image_profile_md"
+                       android:textColor="@color/colorAccent"
+                       android:textSize="25sp"
+                       android:layout_centerHorizontal="true"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/change_password_dm_profile"
+                       android:layout_below="@+id/dm_name_profile_top"
+                       android:textColor="@color/colorPrimary"
+                       android:text="Change Password"
+                       android:padding="8dp"
+                       android:background="@drawable/button_shape"
+                       android:textSize="17sp"
+                       android:layout_centerHorizontal="true"
+                       android:textStyle="bold"/>
+               </RelativeLayout>
+
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/company_header_holder">
+
+                   <ScrollView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       >
+                       <RelativeLayout
+                           android:id="@+id/first_relative"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           >
+                           <TextView
+                               android:id="@+id/account"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="Personal Information"
+                               android:layout_marginTop="20dp"
+                               android:textSize="23sp"
+                               android:textAlignment="center"
+                               android:textColor="@color/colorPrimaryDark"
+                               android:textStyle="bold"
+                               />
+
+                           <View
+                               android:id="@+id/hr"
+                               android:layout_width="match_parent"
+                               android:layout_height="2dp"
+                               android:background="#050D1E"
+                               android:layout_below="@+id/account"/>
+
+
+                           <LinearLayout
+                               android:id="@+id/Account_first"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="20dp"
+                               android:orientation="horizontal"
+                               android:layout_below="@+id/hr"
+                               >
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Name:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/dm_name_profile_TextView"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000"
+                                   />
+
+
+                           </LinearLayout>
+
+                           <LinearLayout
+                               android:id="@+id/Account_second"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="5dp"
+                               android:layout_below="@+id/Account_first">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Phone:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/dm_phone_profile"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000" />
+
+
+                           </LinearLayout>
+
+                           <LinearLayout
+                               android:id="@+id/Account_third"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="5dp"
+                               android:layout_below="@+id/Account_second">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Email:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/dm_email_profile"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000" />
+
+
+                           </LinearLayout>
+                           <LinearLayout
+                               android:id="@+id/Account_fouth"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="5dp"
+                               android:layout_below="@+id/Account_third">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="NID:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/dm_nid_profile"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000" />
+
+
+                           </LinearLayout>
+
+
+                           <TextView
+                               android:id="@+id/business"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="Vehicle Information"
+                               android:layout_marginTop="40dp"
+                               android:textSize="23sp"
+                               android:textAlignment="center"
+                               android:textColor="@color/colorPrimaryDark"
+                               android:textStyle="bold"
+                               android:layout_below="@id/Account_third"
+                               />
+
+                           <View
+                               android:id="@+id/hr1"
+                               android:layout_width="match_parent"
+                               android:layout_height="2dp"
+                               android:background="#050D1E"
+                               android:layout_below="@+id/business"/>
+
+
+                           <LinearLayout
+                               android:id="@+id/business_first"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="20dp"
+                               android:layout_below="@+id/hr1">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Type:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/vehicle_type_profile_TextView"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000"
+                                   />
+
+
+                           </LinearLayout>
+
+                           <LinearLayout
+                               android:id="@+id/business_second"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginBottom="30dp"
+                               android:layout_below="@+id/business_first">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="License No:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/license_no_profile"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000" />
+
+
+                           </LinearLayout>
+
+
+
+                           <TextView
+                               android:id="@+id/service_location"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="Service Location"
+                               android:layout_marginTop="20dp"
+                               android:textSize="23sp"
+                               android:textAlignment="center"
+                               android:textColor="@color/colorPrimaryDark"
+                               android:textStyle="bold"
+                               android:layout_below="@id/business_second"
+                               />
+
+                           <View
+                               android:id="@+id/hr2"
+                               android:layout_width="match_parent"
+                               android:layout_height="2dp"
+                               android:background="#050D1E"
+                               android:layout_below="@+id/service_location"/>
+
+
+                           <LinearLayout
+                               android:id="@+id/service_location_first"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="20dp"
+                               android:layout_below="@+id/hr2">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="District:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/district_dm_profile_TextView"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000"
+                                   />
+
+
+                           </LinearLayout>
+
+                           <LinearLayout
+                               android:id="@+id/service_location_second"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginBottom="30dp"
+                               android:layout_below="@+id/service_location_first">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="Thana:"
+                                   android:textSize="20sp"
+                                   android:textColor="#010220"
+                                   android:textStyle="bold"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="10dp"/>
+
+                               <TextView
+                                   android:id="@+id/thana_dm_profile"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:textSize="18sp"
+                                   android:textColor="#000000" />
+
+
+                           </LinearLayout>
+
+
+
+
+
+                       </RelativeLayout>
+
+
+
+
+
+
+
+
+                   </ScrollView>
+
+
+
+
+               </RelativeLayout>
+
+
+
+           </RelativeLayout>
+
+
+
+   </RelativeLayout>
+
+</FrameLayout>

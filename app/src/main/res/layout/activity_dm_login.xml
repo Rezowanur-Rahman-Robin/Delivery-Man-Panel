@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".DmLoginActivity">
+
+
+    <ScrollView
+        android:id="@+id/dm_login_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/company_header_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@drawable/circleshape"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="128dp"
+                        android:text="Company Name"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fast Delivery And Reliable Courier Service"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangel_shape"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/logo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+
+
+                <EditText
+                    android:id="@+id/dmLoginEmail"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Email"
+                    android:background="@drawable/button_shape"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    />
+
+                <EditText
+                    android:id="@+id/dmLoginPassword"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dmLoginEmail"
+                    android:hint="Enter Your Password"
+                    android:background="@drawable/button_shape"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+                <Button
+                    android:id="@+id/dm_signInButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dmLoginPassword"
+                    android:background="@drawable/bluelongbuttonshape"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="Sign in"
+                    android:textColor="@color/colorAccent"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/forget_password_dm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forget Password"
+                    android:layout_below="@+id/dm_signInButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_marginTop="3dp"/>
+
+
+                <Button
+                    android:id="@+id/dm_apply_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forget_password_dm"
+                    android:background="@drawable/bluelongbuttonshape"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="Apply For Delivery Man"
+                    android:textColor="@color/colorAccent"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

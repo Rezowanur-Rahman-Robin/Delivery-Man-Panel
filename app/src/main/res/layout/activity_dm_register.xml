@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".DmRegisterActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_rectangle"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:layout_marginTop="40dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/hr"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#050D1E"
+                android:layout_below="@+id/account"/>
+
+            <EditText
+                android:id="@+id/dm_name_registration"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="    Enter Your Name.."
+                android:layout_below="@+id/hr"
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                />
+            <EditText
+                android:id="@+id/dm_phone_registration"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="    Enter Phone Number.."
+                android:inputType="number"
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/dm_name_registration"
+                android:layout_centerHorizontal="true"
+                />
+
+            <EditText
+                android:id="@+id/dm_email_registration"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="    Enter Your Email.."
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/dm_phone_registration"
+                android:layout_centerHorizontal="true"
+                />
+
+            <EditText
+                android:id="@+id/dm_nid_registration"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="    Enter Your NID no.."
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/dm_email_registration"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/Business_Information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Information"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/dm_nid_registration"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/hr1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#050D1E"
+                android:layout_below="@+id/Business_Information"/>
+
+            <LinearLayout
+                android:id="@+id/info_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/hr1"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Vehicle Type*"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vehocle_tpe"
+                    android:layout_marginStart="30dp"
+                    >
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/vehicle_type_Group">
+                        <RadioButton
+                            android:id="@+id/v_type_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bike"
+                            />
+                        <RadioButton
+                            android:id="@+id/v_type_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Car" />
+
+                        <RadioButton
+                            android:id="@+id/v_type_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Others" />
+
+
+                    </RadioGroup>
+
+
+
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vehocle_tpe"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/dm_licence_registration"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:hint="    Enter License No of your Vehicle"
+                        android:background="@drawable/button_shape"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="textEmailAddress"
+                        android:layout_centerHorizontal="true"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/Pickup_Information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address Information"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/info_vehicle"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/hr3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#050D1E"
+                android:layout_below="@+id/Pickup_Information"/>
+
+
+            <RelativeLayout
+                android:id="@id/select_districts_add_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/hr3">
+
+
+                <TextView
+                    android:id="@+id/dis_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select District:"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/districts_add_dm"
+                    android:layout_marginTop="12dp"
+                    android:foregroundTint="#222"
+                    android:layout_toEndOf="@+id/dis_register"
+                    android:background="#001c47"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/select_thana_add_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/select_districts_add_product"
+                >
+
+
+                <TextView
+                    android:id="@+id/thana_register_dm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Thana:"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/thana_add_dm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:foregroundTint="#222"
+                    android:background="#001c47"
+                    android:layout_toEndOf="@+id/thana_register_dm"
+                    android:layout_marginBottom="10dp"
+
+                    />
+
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/address_Details_add_dm"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Additional Address Details..."
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/select_thana_add_product"
+                android:lines="3"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/serviceLocation_Information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Location"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/address_Details_add_dm"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/hr4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#050D1E"
+                android:layout_below="@+id/serviceLocation_Information"/>
+
+
+            <RelativeLayout
+                android:id="@+id/select_district_sevice_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/hr4">
+
+
+                <TextView
+                    android:id="@+id/dis_register_service_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select District:"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/service_location_districts_add_dm"
+                    android:layout_marginTop="12dp"
+                    android:foregroundTint="#222"
+                    android:layout_toEndOf="@+id/dis_register_service_location"
+                    android:background="#001c47"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/select_thana_service_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/select_district_sevice_location"
+                >
+
+
+                <TextView
+                    android:id="@+id/thana_register_dm_service_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Thana:"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/service_location_thana_add_dm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:foregroundTint="#222"
+                    android:background="#001c47"
+                    android:layout_toEndOf="@+id/thana_register_dm_service_location"
+                    android:layout_marginBottom="10dp"
+
+                    />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/apply_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluelongbuttonshape"
+                android:layout_below="@+id/select_thana_service_location"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
